@@ -1,0 +1,17 @@
+#tools
+Golang
+GDB with GEF/PETA
+Ghidra
+DISCORD
+STEGOSUITE
+STEGOCRACKER
+STEGOHIDE
+SN1PER - Your version if you cant have exploitation automated
+GIT Tools for '.git' directory exploitation
+Chrome Browser with DEV TOOLS
+ZAPproxy
+BURPSuite Updated
+
+ADD IPPSEC>ROCKS to browser
+
+
