@@ -12,6 +12,38 @@ Chrome Browser with DEV TOOLS
 ZAPproxy
 BURPSuite Updated
 
+apt install wine-python-2.7
+# install python for windows
+wget https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
+wine msiexec /i python-2.7.8.msi
+rm python-2.7.8.msi
+# install pywin32
+wget http://downloads.sourceforge.net/project/pywin32/pywin32/Build%20220/pywin32-220.win32-py2.7.exe
+wine pywin32–220.win32-py2.7.exe
+rm pywin32–220.win32-py2.7.exe
+# install pyinstaller
+wget https://github.com/pyinstaller/pyinstaller/releases/download/v2.1/PyInstaller-2.1.zip
+unzip PyInstaller-2.1.zip -d /opt
+rm PyInstaller-2.1.zip
+# convert python to exe
+wine c:/Python27/python.exe /opt/PyInstaller-2.1/pyinstaller.py — onefile evil.py
+=> dist/evil.exe
+
+bettercap
+bettercap-caplets
+bettercap-ui 		# maybe
+
+pwntools
+sudo pip install capstone
+
+Audacity at https://www.audacityteam.org/download/?__cf_chl_jschl_tk__=4f333704157d4be307898be083bec9cc7b0ac37f-1589931059-0-ARwE25ZC3K5LvOfD5LU16pzvOn890m0oiJzTb7LsLKU-yKcCBe9A3DFqz_pVXAu8u2du2HZ0fA02oRlsHGHIr-Yh9tGmtEZnmj3DCcCFtroFEcZGK9qBLPCTPlNjqe_WUeyMOlPBw4dI_ilFX91oCC-DcFHAVo903zxec9bSZW77dV3-fMs2mIE6k3JTB8b2_wNuTrW67NMqTckQQl7ihse6TGF1Zb60IEKYkQqe1g92MMof7uIZSXRgSydHN8gywSF6wVVAv2DNPcsgziNBSqnAb1kVkWASQeox_sMau7mocoo2H6yOh215nh2zon2NNUNMMECHC1Mz_OfFNg-DFVx7Aqh7uyKiOeZduMPjtumy
+
+volatility
+volatility-tools
+
+
+pip install raccoon-scanner
+
 ADD IPPSEC>ROCKS to browser
 
 
