@@ -2,7 +2,8 @@
 sudo apt update
 
 sudo apt install -y golang
-GDB with GEF/PETA
+wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh #GDB with GEF/PETA
+sudo wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh # do this for root as well
 #Ghidra
 #DISCORD
 sudo apt install -y stegosuite #STEGOSUITE
@@ -11,7 +12,7 @@ sudo apt install -y forensics-extra
 #STEGOHIDE
 
 #SN1PER - Your version if you cant have exploitation automated
-git clone https://github.com/1N3/Sn1per
+git clone https://github.com/1N3/Sn1per /opt/
 
 sudo apt install -y git #GIT Tools for '.git' directory exploitation
 sudo apt install -y google-chrome-stable #Chrome Browser with DEV TOOLS
@@ -46,11 +47,11 @@ sudo pip install -y capstone
 
 #Audacity at https://www.audacityteam.org/download/?__cf_chl_jschl_tk__=4f333704157d4be307898be083bec9cc7b0ac37f-1589931059-0-ARwE25ZC3K5LvOfD5LU16pzvOn890m0oiJzTb7LsLKU-yKcCBe9A3DFqz_pVXAu8u2du2HZ0fA02oRlsHGHIr-Yh9tGmtEZnmj3DCcCFtroFEcZGK9qBLPCTPlNjqe_WUeyMOlPBw4dI_ilFX91oCC-DcFHAVo903zxec9bSZW77dV3-fMs2mIE6k3JTB8b2_wNuTrW67NMqTckQQl7ihse6TGF1Zb60IEKYkQqe1g92MMof7uIZSXRgSydHN8gywSF6wVVAv2DNPcsgziNBSqnAb1kVkWASQeox_sMau7mocoo2H6yOh215nh2zon2NNUNMMECHC1Mz_OfFNg-DFVx7Aqh7uyKiOeZduMPjtumy
 
-apt install -y volatility
-apt install -y volatility-tools
+sudo apt install -y volatility
+sudo apt install -y volatility-tools
 
 
-pip install -y raccoon-scanner
+sudo pip install -y raccoon-scanner
 
 #ADD IPPSEC>ROCKS to browser
 
