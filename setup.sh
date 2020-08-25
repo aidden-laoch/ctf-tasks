@@ -13,23 +13,23 @@ sudo apt install -y volatility-tools
 # Stuff to compile for windows......
 sudo apt install -y wine-python-2.7
 # install -y python for windows
-wget https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
-wine msiexec /i python-2.7.8.msi
-rm python-2.7.8.msi
+sudo wget https://www.python.org/ftp/python/2.7.8/python-2.7.8.msi
+sudo wine msiexec /i python-2.7.8.msi
+sudo rm python-2.7.8.msi
 # install -y pywin32
-wget http://downloads.sourceforge.net/project/pywin32/pywin32/Build%20220/pywin32-220.win32-py2.7.exe
-wine pywin32–220.win32-py2.7.exe
-rm pywin32–220.win32-py2.7.exe
+sudo wget http://downloads.sourceforge.net/project/pywin32/pywin32/Build%20220/pywin32-220.win32-py2.7.exe
+sudo wine pywin32–220.win32-py2.7.exe
+sudo rm pywin32–220.win32-py2.7.exe
 # install -y pyinstall -yer
-wget https://github.com/pyinstall -yer/pyinstall -yer/releases/download/v2.1/PyInstaller-2.1.zip
-unzip PyInstaller-2.1.zip -d /opt
-rm PyInstaller-2.1.zip
+sudo wget https://github.com/pyinstall -yer/pyinstall -yer/releases/download/v2.1/PyInstaller-2.1.zip
+sudo unzip PyInstaller-2.1.zip -d /opt
+sudo rm PyInstaller-2.1.zip
 # convert python to exe
 #wine c:/Python27/python.exe /opt/PyInstaller-2.1/pyinstall -yer.py — onefile evil.py
 #=> dist/evil.exe
 
 ##### Exploit DEV
-wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh #GDB with GEF/PETA
+sudo wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh #GDB with GEF/PETA
 sudo wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh # do this for root as well
 sudo pip3 install pwntools
 sudo pip3 install capstone
@@ -39,7 +39,7 @@ sudo pip3 install capstone
 ##### DISCORD
 
 ##### SN1PER - Your version if you cant have exploitation automated
-git clone https://github.com/1N3/Sn1per /opt/
+sudo git clone https://github.com/1N3/Sn1per /opt/
 
 ##### ZAPproxy
 ##### BURPSuite Updated
