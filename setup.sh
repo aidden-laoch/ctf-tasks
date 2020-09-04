@@ -49,7 +49,7 @@ sudo git clone https://github.com/1N3/Sn1per /opt/
 ##### ADD https://gtfobins.github.io/gtfobins/systemctl/ to browser #####
 
 ##### Add to roots .bashrc file.
-sudo echo "alias msfupdate='apt install -y -f metasploit-framework'" > /root/.bashrc 
-sudo echo "alias htb='tmux new -s htb_vpn "openvpn /home/aidden/Downloads/aidden.ovpn"'" > /root/.bashrc
-sudo echo "alias recon='nmap -A -vvv -p- -oA'" > /root/.bashrc
-sudo echo "alias htbm='echo "htb ip: " && read ip && echo "htb machine: " && read machine && mkdir $machine && cd $machine && tmux new -s $machine'" > /root/.bashrc
+sudo echo "alias msfupdate='apt install -y -f metasploit-framework'" >> /root/.bashrc 
+sudo echo "alias htb='tmux new -s htb_vpn "openvpn /home/aidden/Downloads/aidden.ovpn"'" >> /root/.bashrc
+sudo echo "alias recon='nmap -A -vvv -p- -oA'" >> /root/.bashrc
+sudo echo "alias htbm='echo "htb ip: " && read ip && echo "htb machine: " && read machine && mkdir $machine && cd $machine && tmux new -s $machine'" >> /root/.bashrc
