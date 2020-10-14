@@ -1,3 +1,42 @@
+#!/bin/bash
+if [ "$1" == '-h' ]; then
+	echo '''
+##############################################################
+#	Setup system with basic config for ctfs/htb/thm      #
+##############################################################
+
+./setup.sh  {username} {-T/-H/-TH}
+
+   -h		# Displays this help message
+
+   -T		# Specifies a tryhackme.com account with a openvpn file
+			in the downloads directory of the specified user
+			(expects the .ovpn file will be named thm-{username}.ovpn
+
+   -H		# Specifies a hackthebox.eu account with a openvpn file
+			in the downloads directory of the specified user
+			(expects the .ovpn file will be named htb-{username}.ovpn
+
+   -TH		# Specifies a tryhackme.com and hackthebox.eu account with 
+   			a openvpn file in the downloads directory of the 
+			specified user
+			(expects the .ovpn files will be named thm-{username}.ovpn
+			and htb-{username}.ovpn respectivly
+	'''
+fi
+
+if [ "$1" == '' ]; then
+	echo 'You must specify a username!'
+	exit
+fi
+
+if [ "$2" == '' ]; then
+	echo 'You must specify if you have HackThebox or TryHackMe accounts!'
+	exit
+fi
+
+##### Dependencies
+sudo apt install -y python3-pip
 ##### Tools
 sudo apt update
 sudo apt install -y golang
@@ -50,8 +89,21 @@ sudo git clone https://github.com/1N3/Sn1per /opt/
 
 ##### Add to roots .bashrc file.
 sudo echo "alias msfupdate='apt install -y -f metasploit-framework'" >> /root/.bashrc 
-sudo echo "alias htb='tmux new -s htb_vpn "openvpn /home/aidden/Downloads/htb-aidden.ovpn"'" >> /root/.bashrc
 sudo echo "alias recon='nmap -A -vvv -p- -oA'" >> /root/.bashrc
-sudo echo "alias htbm='echo "htb ip: " && read ip && export ip=$ip && echo "htb machine: " && read machine && mkdir $machine && cd $machine && tmux new -s htb-$machine'" >> /root/.bashrc
-sudo echo "alias thm='tmux new -s thm_vpn "openvpn /home/aidden/Downloads/thm-aidden.ovpn"'" >> /root/.bashrc
-sudo echo "alias thmm='echo "thm ip: " && read ip && export ip=$ip && echo "thm machine: " && read machine && mkdir $machine && cd $machine && tmux new -s thm-$machine'" >> /root/.bashrc
+
+if [ "$2" == '-H' ]; then
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'"
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'"
+fi
+
+if [ "$2" == '-T' ]; then
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'"
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'"
+fi
+
+if [ "$2" == '-TH'  ]; then
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'"
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'"
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'"
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'"
+fi
