@@ -78,10 +78,10 @@ sudo pip3 install capstone
 ##### DISCORD
 
 ##### SN1PER - Your version if you cant have exploitation automated
-sudo git clone https://github.com/1N3/Sn1per /opt/
+sudo git clone https://github.com/1N3/Sn1per /opt/Sn1per
 
 ##### sumrecon install for recon 
-sudo git clone https://github.com/Gr1mmie/sumrecon.git /opt/
+sudo git clone https://github.com/Gr1mmie/sumrecon.git /opt/volatility
 
 ##### ZAPproxy
 ##### BURPSuite Updated
