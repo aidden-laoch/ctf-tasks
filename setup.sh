@@ -95,18 +95,26 @@ sudo echo "alias msfupdate='apt install -y -f metasploit-framework'" >> /root/.b
 sudo echo "alias recon='nmap -A -vvv -p- -oA'" >> /root/.bashrc
 
 if [ "$2" == '-H' ]; then
-	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'"
-	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'"
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'" >> /root/.bashrc
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'" >> /root/.bashrc	
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'" >> /root/.zshrc
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'" >> /root/.zshrc
 fi
 
 if [ "$2" == '-T' ]; then
-	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'"
-	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'"
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'" >> /root/.bashrc
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'" >> /root/.bashrc
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'" >> /root/.zshrc
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'" >> /root/.zshrc
 fi
 
 if [ "$2" == '-TH'  ]; then
-	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'"
-	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'"
-	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'"
-	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'"
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'" >> /root/.bashrc
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'" >> /root/.bashrc
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'" >> /root/.zshrc
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'" >> /root/.zshrc
+	sudo echo "alias htb='tmux new -s htb_vpn \"openvpn /home/$1/Downloads/htb-$1.ovpn\"'" >> /root/.bashrc
+	sudo echo "alias htbm='echo \"htb ip: \" && read ip && export ip=\$ip && echo \"htb machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s htb-\$machine'" >> /root/.bashrc
+	sudo echo "alias thm='tmux new -s thm_vpn \"openvpn /home/$1/Downloads/thm-$1.ovpn\"'" >> /root/.zshrc
+	sudo echo "alias thmm='echo \"thm ip: \" && read ip && export ip=\$ip && echo \"thm machine: \" && read machine && mkdir \$machine && cd \$machine && tmux new -s thm-\$machine'" >> /root/.zshrc
 fi
